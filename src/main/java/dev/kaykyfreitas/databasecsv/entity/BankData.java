@@ -6,31 +6,27 @@ import lombok.*;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.util.Date;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Person {
+public class BankData {
 
     @Id
     private Integer id;
 
-    @Column
-    private String name;
+    @Column(name = "person_id")
+    private Integer personId;
 
     @Column
-    private String email;
+    private Integer agency;
 
     @Column
-    private Date birth;
+    private Integer account;
 
     @Column
-    private Integer age;
-
-    @Column
-    private Integer bankId;
+    private Integer bank;
 
 }
